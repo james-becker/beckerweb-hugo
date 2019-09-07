@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+
+
+ <html class="no-js"> 
+<head>
+    <title>Displaying and Killing Open Connections via Postgres Queries &middot; james becker web</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="James Becker">
+    <meta name="description" content="Describe your website">
+    <meta name="generator" content="Hugo 0.58.0" />
+
+    
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://example.org/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    
+    <div class="off-canvas">
+    <figure class="avatar">
+        <img src="http://example.org/img/avatar.jpg" title="James Becker">
+    </figure>
+    <div class="bio">
+        
+        <h1>Hi, I&#39;m John Doe</h1>
+        
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, pariatur!</p>
+        
+    </div>
+    <nav>
+
+        
+
+        
+        <h6>Subscribe</h6>
+        
+
+        <ul>
+            <li><a target="_blank" href="http://example.org/index.xml">RSS feed</a></li>
+        </ul>
+
+        
+        <h6>Follow me on</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="//github.com/spf13">Github</a></li>
+        
+            <li><a target="_blank" href="//twitter.com/spf13">Twitter</a></li>
+        
+        </ul>        
+    </nav>
+</div>
+
+
+    <div class="site-wrapper">
+        <header>
+	<div class="h-wrap">
+		
+		<h1 class="title"><a href="http://example.org/">james becker web</a></h1>
+		
+		<a class="menu-icon" title="Menu"><span class="lines"></span></a>
+	</div>
+</header>
+        
+        <section class="single-wrap">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    6. September 2019
+                    </time>
+                    </h5>
+                </div>
+                <h1 class="page-title" itemprop="name headline">Displaying and Killing Open Connections via Postgres Queries</h1>
+                <div itemprop="articleBody">
+                    
+
+<h2 id="displaying-and-killing-open-connections-via-postgres-queries">Displaying and Killing Open Connections via Postgres Queries</h2>
+
+<p>The <code>pg_stat_activity</code> table can display all current connections to all databases. This is useful if you need to kill connections to perform some database-level activity, such as renaming an imported database.</p>
+
+<pre><code class="language-sql">select pid as process_id, 
+       usename as username, 
+       datname as database_name, 
+       client_addr as client_address, 
+       application_name,
+       backend_start,
+       state,
+       state_change
+from pg_stat_activity;
+</code></pre>
+
+<p>This query lists the <code>pids</code> of the connection processes you may want to kill.You can kill them, but before you can perform your database-level operation, you will need to prevent new client reconnections. To do this, the <code>pg_database</code> table needs to be updated, but this can only be done as a superuser. Instead, run:</p>
+
+<pre><code class="language-sql">ALTER database &quot;my-db&quot;
+  with is_template true
+       allow_connections false;
+</code></pre>
+
+<p>To kill all processes of open connections to a target database, you can now SELECT them and run pg_terminate_backend() via the following query:</p>
+
+<pre><code class="language-sql">SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'my-db'
+  AND pid &lt;&gt; pg_backend_pid();
+</code></pre>
+
+<p>And then perform your database operations:</p>
+
+<pre><code class="language-sql">ALTER DATABASE &quot;my-db&quot; RENAME TO &quot;my-db-bak&quot;;
+ALTER DATABASE &quot;my-db-new&quot; RENAME TO &quot;my-db&quot;;
+</code></pre>
+
+<p>Remember to re-allow database connections after the changes are complete, with:</p>
+
+<pre><code class="language-sql">ALTER database &quot;my-db&quot;
+  with is_template true
+       allow_connections true;
+</code></pre>
+
+                </div>
+                <div class="feat share">
+                    <a href="//twitter.com/share" class="popup">
+                        <span class="icon-twitter"></span>
+                    </a>
+                </div>
+                
+                
+
+                
+                
+                    <a rel="prev" href="http://example.org/2019/09/06/faqs/" id="prev">
+                        &larr; <span class="nav-title nav-title-prev">Older</span>
+                    </a>
+                
+            </article>
+        </section>
+
+        <footer>
+	
+	<small>POWERED BY <a href="//gohugo.io">HUGO</a> - THEME: <a href="//github.com/digitalcraftsman/hugo-hikari-theme">HIKARI</a> - © JOHN DOE</small>
+	
+</footer>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://example.org/js/main.js"></script>
+
+
+
+
+<!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

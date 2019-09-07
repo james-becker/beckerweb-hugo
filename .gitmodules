@@ -1,0 +1,27 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "themes/er"]
+	path = themes/er
+	url = https://github.com/lingxz/er.git
+[submodule "themes/minimo"]
+	path = themes/minimo
+	url = https://github.com/MunifTanjim/minimo.git
+[submodule "themes/kube"]
+	path = themes/kube
+	url = https://github.com/jeblister/kube.git
+[submodule "themes/prologue"]
+	path = themes/prologue
+	url = https://github.com/sethmacleod/prologue.git
+[submodule "themes/aerial"]
+	path = themes/aerial
+	url = https://github.com/sethmacleod/aerial.git
+[submodule "themes/hpstr"]
+	path = themes/hpstr
+	url = https://github.com/dldx/hpstr-hugo-theme.git
+[submodule "themes/hikari"]
+	path = themes/hikari
+	url = https://github.com/digitalcraftsman/hugo-hikari-theme.git
+[submodule "themes/hikari-new"]
+	path = themes/hikari-new
+	url = https://github.com/digitalcraftsman/hugo-hikari-theme.git
