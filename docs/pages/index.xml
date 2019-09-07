@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on james becker web</title>
-    <link>https://jamsbec.github.io/pages/</link>
+    <link>https://james-becker.github.io/beckerweb/pages/</link>
     <description>Recent content in Pages on james becker web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Sep 2019 15:27:25 +0700</lastBuildDate>
     
-	<atom:link href="https://jamsbec.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://james-becker.github.io/beckerweb/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>whoami</title>
-      <link>https://jamsbec.github.io/pages/faqs/</link>
+      <link>https://james-becker.github.io/beckerweb/pages/faqs/</link>
       <pubDate>Fri, 06 Sep 2019 15:27:25 +0700</pubDate>
       
-      <guid>https://jamsbec.github.io/pages/faqs/</guid>
+      <guid>https://james-becker.github.io/beckerweb/pages/faqs/</guid>
       <description>FAQs Can you speak, read, or write Thai? I can speak Thai at the street level. Learning conversational Thai is really not all that hard. Even if you have no experience with foreign languages, it&amp;rsquo;s far easier than learning Spanish, French, or German.
 Reading and writing Thai is another matter. Because the Thai language has 59 letters (33 more than English), learning to read and write Thai can be quite difficult.</description>
     </item>

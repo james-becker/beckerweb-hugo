@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>james becker web</title>
-    <link>https://jamsbec.github.io/</link>
+    <link>https://james-becker.github.io/beckerweb/</link>
     <description>Recent content on james becker web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Sep 2019 15:27:25 +0700</lastBuildDate>
     
-	<atom:link href="https://jamsbec.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://james-becker.github.io/beckerweb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Displaying and Killing Open Connections via Postgres Queries</title>
-      <link>https://jamsbec.github.io/2019/09/06/displaying-and-killing-open-connections-via-postgres-queries/</link>
+      <link>https://james-becker.github.io/beckerweb/2019/09/06/displaying-and-killing-open-connections-via-postgres-queries/</link>
       <pubDate>Fri, 06 Sep 2019 15:27:25 +0700</pubDate>
       
-      <guid>https://jamsbec.github.io/2019/09/06/displaying-and-killing-open-connections-via-postgres-queries/</guid>
+      <guid>https://james-becker.github.io/beckerweb/2019/09/06/displaying-and-killing-open-connections-via-postgres-queries/</guid>
       <description>Displaying and Killing Open Connections via Postgres Queries The pg_stat_activity table can display all current connections to all databases. This is useful if you need to kill connections to perform some database-level activity, such as renaming an imported database.
 select pid as process_id, usename as username, datname as database_name, client_addr as client_address, application_name, backend_start, state, state_change from pg_stat_activity;  This query lists the pids of the connection processes you may want to kill.</description>
     </item>
     
     <item>
       <title>FAQs</title>
-      <link>https://jamsbec.github.io/2019/09/06/faqs/</link>
+      <link>https://james-becker.github.io/beckerweb/2019/09/06/faqs/</link>
       <pubDate>Fri, 06 Sep 2019 15:27:25 +0700</pubDate>
       
-      <guid>https://jamsbec.github.io/2019/09/06/faqs/</guid>
+      <guid>https://james-becker.github.io/beckerweb/2019/09/06/faqs/</guid>
       <description>FAQs Who are you? I&amp;rsquo;m a programmer at a tech startup in Asia, an avid gym goer, and an obsessive bedroom music producer and songwriter.
 What&amp;rsquo;s your background? My studies have focused on linguistics, psychology and music theory. My professional background began in civil and structural engineering, and then moved to software development.
 What languages have you studied? I can speak and read Spanish and Thai.
@@ -35,20 +35,20 @@ How do you get around the city?</description>
     
     <item>
       <title>whoami</title>
-      <link>https://jamsbec.github.io/pages/faqs/</link>
+      <link>https://james-becker.github.io/beckerweb/pages/faqs/</link>
       <pubDate>Fri, 06 Sep 2019 15:27:25 +0700</pubDate>
       
-      <guid>https://jamsbec.github.io/pages/faqs/</guid>
+      <guid>https://james-becker.github.io/beckerweb/pages/faqs/</guid>
       <description>FAQs Can you speak, read, or write Thai? I can speak Thai at the street level. Learning conversational Thai is really not all that hard. Even if you have no experience with foreign languages, it&amp;rsquo;s far easier than learning Spanish, French, or German.
 Reading and writing Thai is another matter. Because the Thai language has 59 letters (33 more than English), learning to read and write Thai can be quite difficult.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://jamsbec.github.io/2019/09/01/about/</link>
+      <link>https://james-becker.github.io/beckerweb/2019/09/01/about/</link>
       <pubDate>Sun, 01 Sep 2019 15:27:25 +0700</pubDate>
       
-      <guid>https://jamsbec.github.io/2019/09/01/about/</guid>
+      <guid>https://james-becker.github.io/beckerweb/2019/09/01/about/</guid>
       <description>Why did you create this site? I created this site because there&amp;rsquo;s a necessity for self-expression in today&amp;rsquo;s world and most people aren&amp;rsquo;t filling that need in a healthy fashion. Two common approaches are to use social media, which is the laziest way, and which takes almost no effort at all, but in the end the final product isn&amp;rsquo;t anything one might be proud of. Eventually one ends up being controlled by the social media rather than controlling it, and worst of all, one isn&amp;rsquo;t even legally the owner of one&amp;rsquo;s own social media data.</description>
     </item>
     
