@@ -6,8 +6,6 @@ draft: false
 
 ## FAQs
 
-<img src='/images/james-emily.png'>
-
 ### Who are you?
 
 I'm a programmer at a tech startup in Asia, an avid gym goer, and an obsessive bedroom music producer and songwriter.
