@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://james-becker.github.io/beckerweb/2019/09/07/electronic-music-the-journey/</loc>
+    <lastmod>2019-09-07T15:27:25+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://james-becker.github.io/beckerweb/</loc>
+    <lastmod>2019-09-07T15:27:25+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://james-becker.github.io/beckerweb/post/</loc>
+    <lastmod>2019-09-07T15:27:25+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://james-becker.github.io/beckerweb/2019/09/06/displaying-and-killing-open-connections-via-postgres-queries/</loc>
     <lastmod>2019-09-06T15:27:25+07:00</lastmod>
   </url>
@@ -13,17 +28,7 @@
   </url>
   
   <url>
-    <loc>https://james-becker.github.io/beckerweb/</loc>
-    <lastmod>2019-09-06T15:27:25+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://james-becker.github.io/beckerweb/pages/</loc>
-    <lastmod>2019-09-06T15:27:25+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://james-becker.github.io/beckerweb/post/</loc>
     <lastmod>2019-09-06T15:27:25+07:00</lastmod>
   </url>
   
