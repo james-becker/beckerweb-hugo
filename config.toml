@@ -30,7 +30,7 @@ publishDir = "docs"
 [params.offcanvas]
   # Menu items
   title = "James Becker"
-  bio = "James Becker is a writer, music producer, painter, elephant trainer and software developer residing in Bangkok, Thailand. Covered topics include technology, culture, philosophy, and Asia."
+  bio = "James Becker is a writer, music producer, and software developer residing in Bangkok, Thailand. Topics covered here include technology, culture, philosophy, and Asia."
 
   subscribe = "Subscribe"
   followme = "Find me on"
