@@ -1,0 +1,48 @@
+body, header {
+  background: #2f3438;
+  color: #d9d9d9;
+}
+
+* {
+  font-size: 1em;
+  font-family: Iowan Old Style;
+}
+
+.hljs * {
+  font-family: Courier;
+}
+
+.h-wrap h1.title a {
+  color: #d9d9d9;
+  font-family: Iowan Old Style;
+}
+
+.posts li .p-wrap {
+  background: #2d2d2d;
+}
+
+.posts li .p-wrap:hover{
+  background: #404044;
+}
+
+.posts li:first-child {
+    // border-top: 1px solid #634ceb;
+    border-top: none;
+}
+.posts li {
+    // display: inline-block;
+    // width: 100%;
+    // border-bottom: 1px solid #634ceb;
+    display: inline-block;
+    width: 100%;
+    border-bottom: none;
+}
+
+a {
+  color: #b279b7;
+}
+
+.posts li time {
+    color: #b279b7;
+    // padding-right: 1em;
+}
